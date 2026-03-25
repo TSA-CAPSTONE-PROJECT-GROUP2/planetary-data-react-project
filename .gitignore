@@ -1,7 +1,13 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
 node_modules
 dist
-.env
-.env.local
-.DS_Store
-.npm
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+
 package-lock.json
