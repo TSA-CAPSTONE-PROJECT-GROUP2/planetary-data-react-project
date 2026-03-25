@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Color Variables */
+:root {
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+  
+  --color-primary: #164BAF;
+  --color-bg-dark: #051540;
+  --color-bg-header: #0F2A44;
+  
+  --color-bg-light: #F2F7FF;
+  --color-bg-lighter: #D1E3FF;
+  
+  --color-text-main: #212121;
+  --color-text-dark: #27272E;
+  --color-text-muted: #525252;
+  --color-text-light: #616161;
+  
+  --color-border: #C7C7C7;
+  --color-border-light: #DDDDDD;
+  
+  --color-brand-accent-1: #1274A4;
+  --color-brand-accent-2: #3F85AB;
+  
+  --color-error: #E51937;
+  --color-white-translucent: #FFFFFF70;
+}
+
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Default Body Styles */
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--color-text-main);
+  background-color: var(--color-white);
+  line-height: 1.5;
+}
+
+/* Remove underlines from links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Remove bullets from all lists */
+ul, ol {
+  list-style: none;
+}
+
+/* Make images responsive */
+img, video {
+  max-width: 100%;
+  display: block;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+}
+
+/* Reusable Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Primary Button Style */
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 12px 24px;
+  border-radius: 4px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-brand-accent-1);
+}
+
+/* Outline Button Style */
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-white);
+  padding: 12px 24px;
+  border-radius: 4px;
+  border: 1px solid var(--color-white-translucent);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-outline:hover {
+  background-color: var(--color-white-translucent);
+  color: var(--color-white);
+}
