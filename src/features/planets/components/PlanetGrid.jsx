@@ -1,13 +1,20 @@
-import PlanetCard from './PlanetCard';
+import { planets } from "./planets"
+import PlanetCard from "./PlanetCard";
 
-export default function PlanetGrid() {
-  return (
-    <section id="explore" className="planet-grid">
-      <h2>Visualizing the Differences Between Planets</h2>
-      <p>Each planet in our solar system has unique physical characteristics...</p>
-      <div className="grid">
-        {/* We will map over fetched data here array.map(planet => <PlanetCard key={planet.name} planet={planet} />) */}
-      </div>
+function PlanetGrid() {
+  return(
+    <section className="container">
+
+      {planets.map((planet, index) => (
+        <PlanetCard 
+          key={index}
+          name={planet.name}
+          distance={planet.distance}
+          images={planet.images}
+        />
+      ))} 
     </section>
-  );
+  )
 }
+
+export default PlanetGrid
