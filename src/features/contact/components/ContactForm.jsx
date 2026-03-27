@@ -9,7 +9,7 @@ export default function ContactForm() {
         <div className="contact-header">
           <h2 className="section-title">Have Questions About Planetary Science?</h2>
           <p className="section-subtitle">
-            Interested in learning more about space probes, energy and our planetary data or interested in working? Reach out and we'll get back to you.
+            Interested in learning more about space, astronomy, or how planetary data is collected and analyzed? Reach out and we'll get back to you.
           </p>
         </div>
 
