@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-/* ==========================================================================
-   1. COLOR VARIABLES
-   ========================================================================== */
 :root {
   --color-white: #FFFFFF;
   --color-black: #000000;
@@ -29,9 +26,6 @@
   --color-white-translucent: #FFFFFF70;
 }
 
-/* ==========================================================================
-   2. BASIC RESET & BASE STYLES
-   ========================================================================== */
 * {
   margin: 0;
   padding: 0;
@@ -67,9 +61,6 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
 }
 
-/* ==========================================================================
-   3. LAYOUT & GRID SYSTEM
-   ========================================================================== */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -77,12 +68,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 section {
-  padding: 5rem 0;
+  padding: 3rem 0;
 }
 
-/* ==========================================================================
-   4. UNIFIED SECTION HEADERS
-   ========================================================================== */
 .section-header {
   margin-bottom: 3.5rem;
   max-width: 800px;
@@ -117,9 +105,6 @@ section {
   }
 }
 
-/* ==========================================================================
-   5. COMPONENT: BUTTONS
-   ========================================================================== */
 .btn-primary {
   background-color: var(--color-primary);
   color: var(--color-white);
@@ -801,4 +786,31 @@ section {
   .submit-btn {
     max-width: 100%;
   }
+}
+
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.status-msg {
+  margin-top: 1.5rem;
+  padding: 1.25rem;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.status-msg.success {
+  background-color: #e6ffed;
+  color: #1a7f37;
+  border: 1px solid #acf2bd;
+}
+
+.status-msg.error {
+  background-color: #ffebe9;
+  color: #cf222e;
+  border: 1px solid #ffcfcc;
 }
