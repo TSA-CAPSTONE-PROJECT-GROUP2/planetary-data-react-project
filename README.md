@@ -30,7 +30,7 @@ The project applies the core concepts learned throughout the TS Academy program,
 - **Fetch API & Planet Grid/Cards**: [Member Name]
 - **Planetary Facts Table**: [Member Name]
 - **Contact Form & Submission Validation**: [Member Name]
-- **Footer & Final Polish**: [Group / Member Name]
+- **Footer & Final Polish**: [Daniel Ogbuji]
 
 ---
 
