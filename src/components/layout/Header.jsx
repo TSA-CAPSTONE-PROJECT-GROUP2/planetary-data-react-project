@@ -1,13 +1,11 @@
 export default function Header() {
   return (
-    <header>
-      <div className="logo">Group Logo</div>
-      <nav>
-        <ul>
-          <li><a href="#explore">Explore the Data</a></li>
-          <li><a href="#contact">Contact Us</a></li>
-        </ul>
-      </nav>
+    <header className="main-header">
+      <div className="container header-flex">
+        <a href="/" className="logo">
+          <img src="/graphics.png" alt="Planetary Explorer Logo" className="logo-img" />
+        </a>
+      </div>
     </header>
   );
 }
