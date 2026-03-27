@@ -5,7 +5,6 @@ import PlanetaryFactsTable from './features/planets/components/PlanetaryFactsTab
 function App() {
   return (
     <div className="app-container">
-      <PlanetaryFactsTable />
       <HomeRoute />
     </div>
   );
