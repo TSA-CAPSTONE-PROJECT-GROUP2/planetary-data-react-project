@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-/* Color Variables */
+/* ==========================================================================
+   1. COLOR VARIABLES
+   ========================================================================== */
 :root {
   --color-white: #FFFFFF;
   --color-black: #000000;
@@ -27,14 +29,19 @@
   --color-white-translucent: #FFFFFF70;
 }
 
-/* Basic Reset */
+/* ==========================================================================
+   2. BASIC RESET & BASE STYLES
+   ========================================================================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Default Body Styles */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Inter', sans-serif;
   color: var(--color-text-main);
@@ -42,41 +49,77 @@ body {
   line-height: 1.5;
 }
 
-/* Remove underlines from links */
 a {
   text-decoration: none;
   color: inherit;
 }
 
-/* Remove bullets from all lists */
 ul, ol {
   list-style: none;
 }
 
-/* Make images responsive */
 img, video {
   max-width: 100%;
   display: block;
 }
 
-/* Smooth scrolling for anchor links */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Headings */
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
 }
 
-/* Reusable Container */
+/* ==========================================================================
+   3. LAYOUT & GRID SYSTEM
+   ========================================================================== */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-/* Primary Button Style */
+section {
+  padding: 5rem 0;
+}
+
+/* ==========================================================================
+   4. UNIFIED SECTION HEADERS
+   ========================================================================== */
+.section-header {
+  margin-bottom: 3.5rem;
+  max-width: 800px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-header.text-left {
+  text-align: left;
+  margin-left: 0;
+  max-width: 750px;
+}
+
+.section-title {
+  color: var(--color-primary);
+  margin-bottom: 1.2rem;
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.section-subtitle {
+  color: var(--color-text-main);
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+}
+
+/* ==========================================================================
+   5. COMPONENT: BUTTONS
+   ========================================================================== */
 .btn-primary {
   background-color: var(--color-primary);
   color: var(--color-white);
@@ -85,13 +128,17 @@ h1, h2, h3, h4, h5, h6 {
   border: none;
   font-weight: 600;
   cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
 }
 
 .btn-primary:hover {
   background-color: var(--color-brand-accent-1);
+  transform: translateY(-1px);
 }
 
-/* Outline Button Style */
 .btn-outline {
   background-color: transparent;
   color: var(--color-white);
@@ -100,44 +147,88 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid var(--color-white-translucent);
   font-weight: 600;
   cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 .btn-outline:hover {
   background-color: var(--color-white-translucent);
-  color: var(--color-white);
 }
 
-/* Contact Form Styles */
-.contact-section {
-  padding: 5rem 0;
+/* ==========================================================================
+   6. COMPONENT: PLANET CARDS
+   ========================================================================== */
+.planet-section {
+  background-color: var(--color-bg-light);
+}
+
+.planet-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .planet-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .planet-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+  }
+}
+
+.planet-card {
   background-color: var(--color-white);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.contact-header {
-  margin-bottom: 3rem;
-  text-align: left;
+.planet-card:hover {
+  transform: translateY(-4.5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
-.contact-header .section-title {
-  text-align: left;
-  margin-left: 0;
-  font-size: 2.5rem; /* Larger as per mockup */
-  color: var(--color-primary);
-  margin-bottom: 0.5rem;
+.planet-card img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  display: block;
 }
 
-.contact-header .section-subtitle {
-  text-align: left;
-  margin-left: 0;
-  max-width: 700px;
-  color: var(--color-text-main);
-  line-height: 1.6;
+.planet-card figcaption {
+  padding: 1.5rem 1rem;
+}
+
+.planet-card h3 {
+  color: var(--color-bg-dark);
+  margin-bottom: 0.4rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.planet-card p {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   7. COMPONENT: CONTACT FORM
+   ========================================================================== */
+.contact-section {
+  background-color: var(--color-white);
 }
 
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 2rem; /* Increased spacing */
+  gap: 2rem;
 }
 
 .form-row {
@@ -150,7 +241,7 @@ h1, h2, h3, h4, h5, h6 {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
-  align-items: center; /* Fix alignment - top aligned */
+  align-items: center;
 }
 
 @media (min-width: 900px) {
@@ -200,7 +291,7 @@ h1, h2, h3, h4, h5, h6 {
   background-repeat: no-repeat;
   background-position: right 1rem center;
   background-size: 1.2rem;
-  padding-right: 3rem; /* Extra space for chevron */
+  padding-right: 3rem;
   cursor: pointer;
 }
 
@@ -213,7 +304,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .form-group textarea {
-  min-height: 180px; /* Matched to options height */
+  min-height: 180px;
   resize: none;
 }
 
@@ -226,8 +317,7 @@ h1, h2, h3, h4, h5, h6 {
 .form-options-column {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem; /* Spacing between radio and checkbox groups */
-  justify-content: flex-start;
+  gap: 2.5rem;
 }
 
 .options-title {
@@ -243,7 +333,6 @@ h1, h2, h3, h4, h5, h6 {
   flex-wrap: wrap;
 }
 
-/* Custom Checkbox and Radio Styling */
 .option-group label {
   display: flex;
   align-items: center;
@@ -311,12 +400,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: center;
   gap: 0.8rem;
-  transition: transform 0.2s ease;
   margin-top: 1rem;
-}
-
-.submit-btn:hover {
-  transform: scale(1.02);
 }
 
 .btn-icon {
@@ -325,15 +409,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 768px) {
-  .contact-header .section-title {
-    font-size: 2rem;
-  }
-  
   .submit-btn {
     max-width: 100%;
-  }
-  
-  .option-group {
-    gap: 1.5rem;
   }
 }

@@ -6,7 +6,7 @@ export default function ContactForm() {
   return (
     <section id="contact" className="contact-section">
       <div className="container">
-        <div className="contact-header">
+        <div className="section-header text-left">
           <h2 className="section-title">Have Questions About Planetary Science?</h2>
           <p className="section-subtitle">
             Interested in learning more about space, astronomy, or how planetary data is collected and analyzed? Reach out and we'll get back to you.
