@@ -22,6 +22,7 @@ The project applies the core concepts learned throughout the TS Academy program,
 * **[Daniel]** - [GitHub Profile](https://github.com/DanielOgbuji)
 * **[Shalom]** - [GitHub Profile](https://github.com/Shalom4686)
 * **[Jeremiah]** - [GitHub Profile](https://github.com/HONEYBADGER25main)
+* **[Rotimi]** - [GitHub Profile](https://github.com/rotimi-Chris)
 
 ## Task Distribution
 - **Repository Setup & Architecture**: [Daniel Ogbuji]
