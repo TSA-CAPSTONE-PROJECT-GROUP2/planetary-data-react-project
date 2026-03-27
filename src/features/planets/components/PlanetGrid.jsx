@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import PlanetCard from "./PlanetCard";
+import PlanetCard from "./PlanetCard.jsx";
 import { planets as localPlanetData } from "./planet.js";
 
 export default function PlanetGrid() {

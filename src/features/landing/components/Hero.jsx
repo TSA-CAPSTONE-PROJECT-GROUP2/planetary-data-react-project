@@ -1,6 +1,14 @@
 import React from "react";
 
 export default function Hero() {
+  const handleScroll = () => {
+    // This targets the next section in the Solar System Data Explorer
+    const targetSection = document.getElementById('planet-section');
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="home" className="hero-section">
       <div className="container hero-grid">

@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-/* Color Variables */
+/* ==========================================================================
+   1. COLOR VARIABLES
+   ========================================================================== */
 :root {
   --color-white: #FFFFFF;
   --color-black: #000000;
@@ -27,14 +29,19 @@
   --color-white-translucent: #FFFFFF70;
 }
 
-/* Basic Reset */
+/* ==========================================================================
+   2. BASIC RESET & BASE STYLES
+   ========================================================================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Default Body Styles */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Inter', sans-serif;
   color: var(--color-text-main);
@@ -42,41 +49,77 @@ body {
   line-height: 1.5;
 }
 
-/* Remove underlines from links */
 a {
   text-decoration: none;
   color: inherit;
 }
 
-/* Remove bullets from all lists */
 ul, ol {
   list-style: none;
 }
 
-/* Make images responsive */
 img, video {
   max-width: 100%;
   display: block;
 }
 
-/* Smooth scrolling for anchor links */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Headings */
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
 }
 
-/* Reusable Container */
+/* ==========================================================================
+   3. LAYOUT & GRID SYSTEM
+   ========================================================================== */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-/* Primary Button Style */
+section {
+  padding: 5rem 0;
+}
+
+/* ==========================================================================
+   4. UNIFIED SECTION HEADERS
+   ========================================================================== */
+.section-header {
+  margin-bottom: 3.5rem;
+  max-width: 800px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-header.text-left {
+  text-align: left;
+  margin-left: 0;
+  max-width: 750px;
+}
+
+.section-title {
+  color: var(--color-primary);
+  margin-bottom: 1.2rem;
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.section-subtitle {
+  color: var(--color-text-main);
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+}
+
+/* ==========================================================================
+   5. COMPONENT: BUTTONS
+   ========================================================================== */
 .btn-primary {
   background-color: var(--color-primary);
   color: var(--color-white);
@@ -87,13 +130,15 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
   display: inline-flex;
   align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
 }
 
 .btn-primary:hover {
   background-color: var(--color-brand-accent-1);
+  transform: translateY(-1px);
 }
 
-/* Outline Button Style */
 .btn-outline {
   background-color: transparent;
   color: var(--color-white);
@@ -104,11 +149,11 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
   display: inline-flex;
   align-items: center;
+  transition: all 0.2s ease;
 }
 
 .btn-outline:hover {
   background-color: var(--color-white-translucent);
-  color: var(--color-white);
 }
 
 /* Header & Navigation */
@@ -275,28 +320,236 @@ h1, h2, h3, h4, h5, h6 {
   padding: 4rem 0;
 }
 
+/* Section Headers */
 .section-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
 }
 
+.section-header.text-left {
+  text-align: left;
+  margin-left: 0;
+  max-width: 80%;
+}
+
 .section-title {
   color: var(--color-primary);
-  margin-bottom: 1rem;
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0; /* Removing margin because we use gap */
 }
 
 .section-subtitle {
   color: var(--color-text-main);
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.6;
+  margin: 0; /* Removing margin because we use gap */
 }
 
-/* Planet Grid & Cards */
+/* Task 8: Planetary Facts Table */
+.facts-table {
+  background-color: var(--color-white);
+  padding: 5rem 0;
+}
+
+.table-caption {
+  font-weight: 700;
+  color: var(--color-bg-dark); /* Darker blue */
+  margin-bottom: 1rem; /* Space between caption and table */
+  font-size: 1.05rem;
+}
+
+.table-responsive {
+  overflow-x: auto;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.planetary-table {
+  width: 100%;
+  border-collapse: separate; /* Required for table border-radius */
+  border-spacing: 0;
+  min-width: 100%; /* Changed from 900px to avoid tablet scrolling */
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: var(--color-white);
+}
+
+.planetary-table th {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 1.25rem 1rem;
+  font-weight: 600;
+  font-size: 0.95rem; /* Slightly reduced for tablet fit */
+  text-align: center;
+  border-right: 2px solid var(--color-white);
+  border-bottom: 2px solid var(--color-white);
+}
+
+.planetary-table td {
+  padding: 1.1rem 0.75rem; /* Reduced padding for tablet fit */
+  text-align: center;
+  font-size: 0.95rem; /* Slightly reduced */
+  border-right: 2px solid var(--color-white);
+  border-bottom: 2px solid var(--color-white);
+  color: var(--color-text-main);
+  background-color: var(--color-bg-light);
+}
+
+/* Remove double borders on the right and bottom edges */
+.planetary-table th:last-child,
+.planetary-table td:last-child {
+  border-right: none;
+}
+
+.planetary-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Sidebar groupings */
+.planetary-table .group,
+.planetary-table .subgroup {
+  background-color: var(--color-bg-lighter);
+  font-weight: 700;
+  color: var(--color-bg-dark);
+}
+
+.planetary-table .subgroup {
+  font-weight: 600;
+}
+
+/* Purely semantic hover interactions that don't highlight the sidebars */
+.planetary-table tbody tr:hover td:not(.group):not(.subgroup) {
+  background-color: #e5efff;
+}
+
+/* Desktop sizing corrections */
+@media (min-width: 1024px) {
+  .planetary-table th {
+    font-size: 1rem;
+    padding: 1.25rem 1rem;
+  }
+  .planetary-table td {
+    font-size: 1rem;
+    padding: 1.1rem 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .facts-table {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   6. COMPONENT: VIDEO SECTION
+   ========================================================================== */
+.video-section {
+  background-color: var(--color-white);
+  padding: 6rem 0;
+}
+
+.video-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  background-color: var(--color-black);
+}
+
+.promo-video {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.play-button-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 1);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.95;
+  pointer-events: none;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.play-button-overlay svg {
+  margin-left: 5px;
+  fill: var(--color-primary);
+}
+
+.video-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Matched to .section-header standard */
+}
+
+.highlight-blue {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+/* Response: Stacked layout for Tablet (Bigger video) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .video-container {
+    max-width: 95%; /* Enlarged for tablet per feedback */
+  }
+}
+
+/* Desktop Horizontal Layout */
+@media (min-width: 1024px) {
+  .video-grid {
+    flex-direction: row;
+    gap: 4rem;
+    align-items: center;
+    text-align: left;
+  }
+
+  .video-container {
+    flex: 1.1; /* Video slightly larger area */
+    max-width: none;
+  }
+
+  .video-content {
+    flex: 0.9;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Standardized spacing between header and subtitle */
+    text-align: center; /* Centered as per user request */
+  }
+}
+
+/* ==========================================================================
+   7. COMPONENT: PLANET CARDS
+   ========================================================================== */
+.planet-section {
+  background-color: var(--color-bg-light);
+}
+
 .planet-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -327,8 +580,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .planet-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transform: translateY(-4.5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
 .planet-card img {
@@ -339,17 +592,213 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .planet-card figcaption {
-  padding: 1.25rem 1rem;
+  padding: 1.5rem 1rem;
 }
 
 .planet-card h3 {
   color: var(--color-bg-dark);
-  margin-bottom: 0.25rem;
-  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+  font-size: 1.15rem;
   font-weight: 700;
 }
 
 .planet-card p {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   7. COMPONENT: CONTACT FORM
+   ========================================================================== */
+.contact-section {
+  background-color: var(--color-white);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.form-row-complex {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .form-row {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .form-row-complex {
+    grid-template-columns: 3fr 2fr;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.form-group label {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--color-text-dark);
+}
+
+.req {
+  color: var(--color-error);
+  margin-left: 4px;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+  padding: 1.1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+  width: 100%;
   color: var(--color-text-main);
+  background-color: var(--color-white);
+  transition: all 0.2s ease;
+}
+
+.form-group select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23525252' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1.2rem;
+  padding-right: 3rem;
+  cursor: pointer;
+}
+
+.form-group input:focus, 
+.form-group select:focus, 
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(22, 75, 175, 0.1);
+}
+
+.form-group textarea {
+  min-height: 180px;
+  resize: none;
+}
+
+.char-count {
+  align-self: flex-start;
+  color: var(--color-text-muted);
   font-size: 0.9rem;
+}
+
+.form-options-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.options-title {
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  font-size: 1rem;
+  color: var(--color-text-dark);
+}
+
+.option-group {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.option-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.option-group input[type="radio"],
+.option-group input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--color-border);
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+  margin: 0;
+}
+
+.option-group input[type="radio"] {
+  border-radius: 50%;
+}
+
+.option-group input[type="checkbox"] {
+  border-radius: 4px;
+}
+
+.option-group input:checked {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.option-group input[type="radio"]:checked::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.option-group input[type="checkbox"]:checked::after {
+  content: '✓';
+  position: absolute;
+  color: white;
+  font-size: 12px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.submit-btn {
+  width: 100%;
+  max-width: 320px;
+  height: 56px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.btn-icon {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .submit-btn {
+    max-width: 100%;
+  }
 }
