@@ -19,7 +19,8 @@ The project applies the core concepts learned throughout the TS Academy program,
 ## Team Members
 * [Amaka](https://github.com/Anurella)
 * [Ifeoma](https://www.linkedin.com/in/ifeomaokocha)
-* **[Team Member 3 Name]** - [GitHub Profile](https://github.com/their-username)
+* **[Daniel]** - [GitHub Profile](https://github.com/DanielOgbuji)
+* **[Team Member 4 Name]** - [GitHub Profile](https://github.com/their-username)
 * **[Team Member 4 Name]** - [GitHub Profile](https://github.com/their-username)
 
 ## Task Distribution
