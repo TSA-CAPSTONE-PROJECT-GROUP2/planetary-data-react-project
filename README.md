@@ -12,7 +12,7 @@ The project applies the core concepts learned throughout the TS Academy program,
 - Git Collaboration
 
 ## Live Deployment
-[Live Application Link](https://your-deployment-link-here.netlify.app/) *(To be updated upon deployment)*
+[Live Application Link](https://planetary-data-react-project.vercel.app/)
 
 ---
 
@@ -24,7 +24,7 @@ The project applies the core concepts learned throughout the TS Academy program,
 * **[Team Member 4 Name]** - [GitHub Profile](https://github.com/their-username)
 
 ## Task Distribution
-- **Repository Setup & Architecture**: [Group / Lead Name]
+- **Repository Setup & Architecture**: [Daniel Ogbuji]
 - **Global CSS & Header Component**: [Member Name]
 - **Hero & Video Section**: [Member Name]
 - **Fetch API & Planet Grid/Cards**: [Member Name]
@@ -41,26 +41,6 @@ To run this project locally, follow these steps:
 ### Prerequisites
 - Node.js installed on your machine.
 - Git installed on your machine.
-
-### Installation & Execution
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/Your-Group-Name/ts-academy-capstone.git
-   ```
-2. **Navigate to the project directory:**
-   ```bash
-   cd ts-academy-capstone
-   ```
-3. **Install the dependencies:**
-   ```bash
-   npm install
-   ```
-4. **Start the local development server:**
-   ```bash
-   npm run dev
-   ```
-5. **View the app:**
-   Open your browser and navigate to `http://localhost:5173` (or the port specified in your terminal).
 
 ---
 
