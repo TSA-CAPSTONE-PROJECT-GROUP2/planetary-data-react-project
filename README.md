@@ -24,12 +24,13 @@ The project applies the core concepts learned throughout the TS Academy program,
 * **[Jeremiah]** - [GitHub Profile](https://github.com/HONEYBADGER25main)
 * **[Rotimi]** - [GitHub Profile](https://github.com/rotimi-Chris)
 * **[Chidera]** - [GitHub Profile](https://github.com/deramanuel)
+* **[Christian]** - [GitHub Profile](https://github.com/Chris-SecAdmin)
 
 ## Task Distribution
 - **Repository Setup & Architecture**: [Daniel Ogbuji]
 - **Global CSS & Header Component**: [Member Name]
 - **Hero & Video Section**: [Member Name]
-- **Fetch API & Planet Grid/Cards**: [Member Name]
+- **Fetch API & Planet Grid/Cards**: [Christian Onachukwu]
 - **Planetary Facts Table**: [Shalom Alangbo]
 - **Contact Form & Submission Validation**: [Member Name]
 - **Footer & Final Polish**: [Daniel Ogbuji]
