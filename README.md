@@ -28,7 +28,7 @@ The project applies the core concepts learned throughout the TS Academy program,
 - **Global CSS & Header Component**: [Member Name]
 - **Hero & Video Section**: [Member Name]
 - **Fetch API & Planet Grid/Cards**: [Member Name]
-- **Planetary Facts Table**: [Member Name]
+- **Planetary Facts Table**: [Shalom Alangbo]
 - **Contact Form & Submission Validation**: [Member Name]
 - **Footer & Final Polish**: [Daniel Ogbuji]
 
