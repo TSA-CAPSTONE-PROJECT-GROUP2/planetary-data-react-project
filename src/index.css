@@ -106,3 +106,45 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--color-white-translucent);
   color: var(--color-white);
 }
+/* Task 8:Planetary Facts Table */
+table, th, td {
+  border: 1px solid white;
+  border-collapse: collapse;
+  table-layout: fixed;
+  text-align: center;
+  padding: 10px;
+}
+
+table {
+  width:80%;
+  margin: 1rem auto;
+  font-family: 'Poppins', sans-serif;
+  
+}
+
+th {  
+  background-color: rgb(8, 8, 87);
+  color: white;
+  border-radius: 8px;
+}
+
+.group {
+  background-color: lightblue;
+  color: #051540;
+  font-weight: bold;
+}
+.subgroup {
+  background-color: lightblue;
+  font-weight: bold;
+}
+
+td {
+  background-color: aliceblue;
+  border-radius: 8px;
+}
+
+@media (max-width: px)
+{ .facts-table{
+  display: none;
+ }
+}
