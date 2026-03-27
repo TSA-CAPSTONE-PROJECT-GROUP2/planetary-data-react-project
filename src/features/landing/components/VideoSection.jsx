@@ -1,5 +1,5 @@
-import React from 'react';
-import './VideoSection.css'; 
+import React from "react";
+import "./VideoSection.css"; // Ensure this file is in the SAME folder
 
 export default function VideoSection() {
   return (
@@ -7,8 +7,8 @@ export default function VideoSection() {
       <div className="video-text-container">
         <h2>How Planetary Data Helps Us Understand Space</h2>
         <p>
-          Planetary science goes beyond images. Comparing{' '}
-          <span className="bold-text">mass, distance, gravity</span>, and{' '}
+          Planetary science goes beyond images. Comparing{" "}
+          <span className="bold-text">mass, distance, gravity</span>, and{" "}
           <span className="bold-text">density</span>, we gain insight into how 
           planets form, survive, and interact within the solar system.
         </p>
