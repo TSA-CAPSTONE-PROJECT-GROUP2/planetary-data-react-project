@@ -42,6 +42,9 @@ To run this project locally, follow these steps:
 - Node.js installed on your machine.
 - Git installed on your machine.
 
+### Viewing
+- in your terminal: `npm run dev`
+
 ---
 
 ## Acknowledgments
